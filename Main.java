@@ -136,7 +136,7 @@ public class Main {
         }
         try {
             con = DriverManager.getConnection(url, user, password);
-            con.setAutoCommit(false);
+//            con.setAutoCommit(false);
         } catch (SQLException e) {
             System.err.println("Database connection failed");
             System.err.println(e.getMessage());
@@ -154,8 +154,8 @@ public class Main {
             to_berth = con.prepareStatement("insert into berth (ship_name,city_name) values(?,?)");
             to_orders = con.prepareStatement(
                     "insert into orders (" +
-                            "logtime,import_time,export_time,retrieval_start_time,delivery_finish_time" +
-                            "item_name,container_code,ship_name,retrieval_courier,delivery_courier" +
+                            "log_time,import_time,export_time,retrieval_start_time,delivery_finish_time," +
+                            "item_name,container_code,ship_name,retrieval_courier,delivery_courier," +
                             "retrieval_city,delivery_city,import_city,export_city) " +
                             "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
             );
@@ -361,7 +361,7 @@ public class Main {
                     } catch (SQLException sqlException) {}
                 }
             }
-            con.commit();
+//            con.commit();
             closeDB();
             end = System.currentTimeMillis();
             System.out.println("importing use actual time " + (end - start) + " ms");
@@ -380,6 +380,13 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         fileName="data2.csv";
+//        Class.forName("org.postgresql.Driver");
+//        Connection conn=DriverManager.getConnection(url,user,password);
+//        openDB();
+//        Statement state=con.createStatement();
+//        String sql="insert into orders(log_time,retrieval_start_time) values('2018-03-06 19:35:00.0','2018-03-06')";
+//        state.executeUpdate(sql);
+//        closeDB();
         imp();
     }
 }
