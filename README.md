@@ -2,9 +2,9 @@
 
 Contributors
 
-钟乐        12110619 Lab1  Tasks: Task3, Task4, advanced Task4        Contribution Ratio: 50%
+12110619 Lab1  Tasks: Task3, Task4, advanced Task4        Contribution Ratio: 50%
 
-吴潇阳    12110917 Lab1  Tasks: Task1, Task2 , advanced Task3       Contribution Ratio: 50%
+12110917 Lab1  Tasks: Task1, Task2 , advanced Task3       Contribution Ratio: 50%
 
 ## Task 1: E-R Diagram
 
